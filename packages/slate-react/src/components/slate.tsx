@@ -28,13 +28,13 @@ export const Slate = (props: {
 
   const [context, setContext] = React.useState<SlateContextValue>(() => {
     if (!Node.isNodeList(value)) {
-      throw new Error(
+     console.log(
         `[Slate] value is invalid! Expected a list of elements` +
           `but got: ${Scrubber.stringify(value)}`
       )
     }
     if (!Editor.isEditor(editor)) {
-      throw new Error(
+      console.log(
         `[Slate] editor is invalid! you passed:` +
           `${Scrubber.stringify(editor)}`
       )

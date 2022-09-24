@@ -41,7 +41,7 @@ export function useSlateSelector<T>(
   const [, forceRender] = useReducer(s => s + 1, 0)
   const context = useContext(SlateSelectorContext)
   if (!context) {
-    throw new Error(
+   console.log(
       `The \`useSlateSelector\` hook must be used inside the <Slate> component's context.`
     )
   }
@@ -66,7 +66,7 @@ export function useSlateSelector<T>(
       err.message += `\nThe error may be correlated with this previous error:\n${latestSubscriptionCallbackError.current.stack}\n\n`
     }
 
-    throw err
+    console.log(err)
   }
   useIsomorphicLayoutEffect(() => {
     latestSelector.current = selector

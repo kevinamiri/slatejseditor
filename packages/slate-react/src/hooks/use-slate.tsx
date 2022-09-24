@@ -25,7 +25,7 @@ export const useSlate = (): Editor => {
   const context = useContext(SlateContext)
 
   if (!context) {
-    throw new Error(
+   console.log(
       `The \`useSlate\` hook must be used inside the <Slate> component's context.`
     )
   }
@@ -38,7 +38,7 @@ export const useSlateWithV = () => {
   const context = useContext(SlateContext)
 
   if (!context) {
-    throw new Error(
+   console.log(
       `The \`useSlate\` hook must be used inside the <Slate> component's context.`
     )
   }

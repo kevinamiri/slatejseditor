@@ -18,7 +18,7 @@ export function useMutationObserver(
 
   useEffect(() => {
     if (!node.current) {
-      throw new Error('Failed to attach MutationObserver, `node` is undefined')
+     console.log('Failed to attach MutationObserver, `node` is undefined')
     }
 
     mutationObserver.observe(node.current, options)

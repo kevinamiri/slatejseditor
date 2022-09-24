@@ -11,7 +11,7 @@ export const useEditor = () => {
   const editor = useContext(EditorContext)
 
   if (!editor) {
-    throw new Error(
+   console.log(
       `The \`useEditor\` hook must be used inside the <Slate> component's context.`
     )
   }

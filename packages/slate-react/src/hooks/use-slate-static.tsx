@@ -16,7 +16,7 @@ export const useSlateStatic = (): Editor => {
   const editor = useContext(EditorContext)
 
   if (!editor) {
-    throw new Error(
+   console.log(
       `The \`useSlateStatic\` hook must be used inside the <Slate> component's context.`
     )
   }
